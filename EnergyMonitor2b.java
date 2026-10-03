@@ -1,14 +1,16 @@
 public class EnergyMonitor2b {
 public static void main(String[] args) {
-        int panelId = 101;
-        double energyGenerated = 12.75;   // in kWh
-        int numberOfPanels = 20;
-        char systemStatus = 'A';          // A = Active
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("----- Rooftop Solar System Details -----");
-        System.out.println("Panel ID            : " + panelId);
-        System.out.println("Energy Generated    : " + energyGenerated + " kWh");
-        System.out.println("Number of Panels    : " + numberOfPanels);
-        System.out.println("System Status       : " + systemStatus);
+        System.out.print("Enter energy generated (kWh): ");
+        double energy = sc.nextDouble();
+
+        if (energy >= 10) {
+            System.out.println("Good Energy Generation");
+        } else {
+            System.out.println("Low Energy Generation");
+        }
+
+        sc.close();
     }
 }
